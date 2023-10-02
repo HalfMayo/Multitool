@@ -7,7 +7,8 @@ export default function Calc() {
         <>
             <PageNav />
             <div className="h-screen">
-                <div className="pt-72 flex flex-col gap-16 items-center justify-start">
+                <div className="pt-72 flex flex-col gap-32 items-center">
+                    <div></div>
                     <Calculator/>
                     <QuoteMachine />
                 </div>

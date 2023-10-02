@@ -66,7 +66,7 @@ export default function CalcBill() {
         <>
             <form className="w-[500px] flex flex-col items-start justify-center gap-4 bg-surface-container p-4 rounded-md" onSubmit={handleSubmit}>
                 <div className="w-full">
-                    <label className="block mb-1" htmlFor="payer">Who paid?</label>
+                    <label className="block mb-1" htmlFor="payer">Who paid the bill?</label>
                         <select className="w-full p-1" name="payer" id="payer" value={payer} onChange={e => setPayer(e.target.value)}>
                             <option value="default">Choose...</option>
                             <option value="you">You</option>
@@ -74,11 +74,11 @@ export default function CalcBill() {
                         </select>
                 </div>
                 <div className="w-full autofill-w">
-                    <label htmlFor="total" className="block mb-1">Bill</label>
+                    <label htmlFor="total" className="block mb-1">Total amount of the bill</label>
                     <input className="w-full py-1 px-2" name="total" id="total" value={total} onChange={(e) => setTotal(e.target.value)}></input>    
                 </div>            
                 <div className="w-full autofill-w">
-                    <label htmlFor="youPaid" className="block mb-1">Your amount</label>
+                    <label htmlFor="youPaid" className="block mb-1">What's your share?</label>
                     <input className="w-full py-1 px-2" name="youPaid" id="youPaid" value={youPaid} onChange={(e) => setYouPaid(e.target.value)}></input>
                 </div>
                 <div className="w-full flex flex-col items-center justify-center py-2 gap-2">
