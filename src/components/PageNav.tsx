@@ -26,6 +26,18 @@ export default function PageNav() {
             <ul className="list-none w-full h-screen flex flex-col items-center justify-center gap-4">
               <li>
                 <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "font-semibold text-on-surface pb-px border-b-2"
+                      : "font-normal text-on-surface"
+                  }
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
                   to="/todo"
                   className={({ isActive }) =>
                     isActive

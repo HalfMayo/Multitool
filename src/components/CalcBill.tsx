@@ -73,7 +73,9 @@ export default function CalcBill() {
   return (
     <>
       <form
-        className="w-[500px] flex flex-col items-start justify-center gap-4 bg-surface-container p-4 rounded-md"
+        className={`w-[90vw] sm:w-[500px] flex flex-col items-start sm:justify-center gap-4 bg-surface-container p-4 rounded-md overflow-y-auto scrollbar sm:h-auto ${
+          window.innerHeight < 700 ? "max-h-80" : "h-auto"
+        }`}
         onSubmit={handleSubmit}
       >
         <div className="w-full">
