@@ -1,12 +1,18 @@
-import {ReactNode} from 'react'
+import { ReactNode } from "react";
 
 interface TipProps {
-    children: ReactNode
+  children: ReactNode;
+  className?: string;
 }
 
-export default function Tip({children} : TipProps) {
-    return(
-        <div className="flex items-center justify-center gap-4 w-full bg-secondary-container text-on-secondary-container p-2 rounded-md">
-            {children}
-        </div>)
+export default function Tip({ children, className }: TipProps) {
+  return (
+    <div
+      className={`${
+        className ? className : ""
+      } flex items-center justify-center gap-4 bg-secondary-container text-on-secondary-container py-2 px-4 rounded-md`}
+    >
+      {children}
+    </div>
+  );
 }
